@@ -1,0 +1,79 @@
+{
+  "styles": [
+    {
+      "id": "tom_jerry",
+      "name": "Classic Tom & Jerry",
+      "prompt_suffix": "classic 1940s-1950s American cartoon animation, Tom and Jerry style, exaggerated comedic expressions, rubber-hose animation, hand-drawn 2D, bold black outlines, muted watercolor backgrounds, orchestral slapstick energy, vintage Technicolor look"
+    },
+    {
+      "id": "pixar_3d",
+      "name": "Pixar-style 3D",
+      "prompt_suffix": "stylized 3D animation, Pixar-style, soft rounded character design, large expressive eyes, warm cinematic lighting, subsurface scattering, polished 3D render, family-film look, gentle depth of field"
+    },
+    {
+      "id": "anime_cel",
+      "name": "Anime Cel-Shaded",
+      "prompt_suffix": "anime style, cel-shaded, crisp line art, hard-edged shadows, expressive hair and eyes, dynamic anime angles, Studio Ghibli inspired backgrounds, vibrant colors"
+    },
+    {
+      "id": "cartoon_network",
+      "name": "Cartoon Network Modern",
+      "prompt_suffix": "modern 2D cartoon, Cartoon Network style, bold clean outlines, flat color shading, exaggerated facial expressions, snappy poses, simple geometric backgrounds, Saturday-morning cartoon energy"
+    },
+    {
+      "id": "studio_ghibli",
+      "name": "Studio Ghibli",
+      "prompt_suffix": "Studio Ghibli style, hand-drawn 2D animation, soft watercolor backgrounds, gentle character design, warm natural lighting, detailed environmental art, nostalgic atmosphere, Miyazaki aesthetic"
+    },
+    {
+      "id": "stop_motion",
+      "name": "Stop-Motion Clay",
+      "prompt_suffix": "stop-motion claymation style, Aardman Studios inspired, clay texture on characters, fingerprint details, miniature set design, practical lighting, whimsical handmade feel"
+    },
+    {
+      "id": "pixel_art",
+      "name": "Retro Pixel Art",
+      "prompt_suffix": "pixel art animation, 16-bit retro game style, limited color palette, dithering, blocky characters, isometric perspective, nostalgic 1990s console aesthetic"
+    },
+    {
+      "id": "disney_renaissance",
+      "name": "Disney Renaissance 2D",
+      "prompt_suffix": "Disney Renaissance 2D animation, 1990s hand-drawn feature film style, expressive character animation, lush painted backgrounds, warm golden lighting, Broadway musical energy"
+    },
+    {
+      "id": "looney_tunes",
+      "name": "Looney Tunes",
+      "prompt_suffix": "Looney Tunes style, Warner Bros classic animation, elastic rubber-hose physics, exaggerated takes, bold primary colors, hand-inked outlines, orchestral cartoon score energy, vaudeville humor"
+    },
+    {
+      "id": "flat_vector",
+      "name": "Flat Vector Modern",
+      "prompt_suffix": "flat vector illustration style, 2D cartoon, bold clean outlines, flat color fills, limited shading, minimal geometric backgrounds, modern corporate animation aesthetic, snappy motion"
+    },
+    {
+      "id": "watercolor_painterly",
+      "name": "Watercolor Painterly",
+      "prompt_suffix": "watercolor painted animation style, soft brush strokes, bleeding edges, paper texture, pastel palette, dreamy atmosphere, hand-painted 2D animation, children's storybook feel"
+    },
+    {
+      "id": "cyberpunk_anime",
+      "name": "Cyberpunk Anime",
+      "prompt_suffix": "cyberpunk anime style, neon-lit cityscape, cel-shaded with hard shadows, futuristic character design, glowing accents, rain-slicked streets, cinematic wide shots, Akira inspired"
+    },
+    {
+      "id": "claymation_dark",
+      "name": "Dark Claymation",
+      "prompt_suffix": "dark stop-motion claymation, Tim Burton style, gothic miniature sets, twisted character design, muted grey-blue palette, dramatic practical lighting, eerie atmosphere"
+    },
+    {
+      "id": "comic_book",
+      "name": "Comic Book Pop Art",
+      "prompt_suffix": "comic book pop art style, bold ink outlines, halftone dot patterns, primary color palette, dramatic panel composition, onomatopoeia energy, 1960s Marvel/DC aesthetic"
+    },
+    {
+      "id": "ghibli_chibi",
+      "name": "Chibi Kawaii",
+      "prompt_suffix": "chibi kawaii anime style, oversized heads small bodies, sparkly eyes, pastel palette, cute exaggerated expressions, soft rounded shapes, Japanese kawaii aesthetic"
+    }
+  ]
+}
