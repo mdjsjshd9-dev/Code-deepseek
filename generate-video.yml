@@ -1,0 +1,82 @@
+name: Generate Cartoon Video (Advanced)
+
+on:
+  workflow_dispatch:
+    inputs:
+      topic:
+        description: "Video topic"
+        required: true
+        default: "A brave little cat who saves a village from a storm"
+      num_scenes:
+        description: "Number of 8-sec scenes"
+        required: true
+        default: "8"
+      style_mode:
+        description: "Style: 'random' ya specific style id"
+        required: true
+        default: "random"
+      release_tag:
+        description: "Release tag"
+        required: true
+        default: "v1.0"
+
+permissions:
+  contents: write
+
+jobs:
+  generate:
+    # ✅ Ubuntu 24.04 pin kiya (stable, Node.js 24 ready)
+    runs-on: ubuntu-24.04
+    timeout-minutes: 120
+
+    steps:
+      # ✅ checkout v5 (Node.js 24 support)
+      - name: Checkout repository
+        uses: actions/checkout@v5
+
+      # ✅ setup-python v6 (Node.js 24 support)
+      - name: Setup Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.11"
+
+      - name: Verify FFmpeg
+        run: ffmpeg -version
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Generate cartoon video
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          VIDEO_TOPIC: ${{ github.event.inputs.topic }}
+          NUM_SCENES: ${{ github.event.inputs.num_scenes }}
+          STYLE_MODE: ${{ github.event.inputs.style_mode }}
+          OUTPUT_FILE: cartoon_video.mp4
+        run: python generate_video.py
+
+      - name: Upload artifact (backup)
+        uses: actions/upload-artifact@v4
+        with:
+          name: cartoon-video-${{ github.run_number }}
+          path: |
+            cartoon_video.mp4
+            video_metadata.json
+          retention-days: 30
+
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ github.event.inputs.release_tag }}
+          name: "🎬 Cartoon Video ${{ github.event.inputs.release_tag }}"
+          body: |
+            **Topic:** ${{ github.event.inputs.topic }}
+            **Style:** ${{ github.event.inputs.style_mode }}
+            **Scenes:** ${{ github.event.inputs.num_scenes }} × 8 sec
+          files: |
+            cartoon_video.mp4
+            video_metadata.json
+          draft: false
+          prerelease: false
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
